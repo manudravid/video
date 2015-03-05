@@ -4,35 +4,27 @@
     id="com.manu.videoplayer"
     version="1.0.0">
 
-    <engines>
-        <engine name="cordova" version=">=3.2.0" />
-    </engines>
+    <name>Video Player</name>
+    <description>Native Video Player Plugin</description>
+    <license>MIT</license>
+    <keywords>cordova,media,player,video</keywords>
+    <repo>https://github.com/manudravid/cordova-plugin-videoplayer.git</repo>
+    <issue>https://github.com/manudravid/cordova-plugin-videoplayer/issues</issue>
 
-	<name>NewActivity</name>
-	<description>Play video with native support for android</description>
-    <author>Manu Palassery</author>
-    <keywords>video,android</keywords>
-	<license>MIT</license>
-    
-    <js-module src="www/NewActivity.js" name="NewActivity">
-		<clobbers target="NewActivity" />
-	</js-module>
-    
+    <js-module src="www/videoplayer.js" name="VideoPlayer">
+        <clobbers target="VideoPlayer" />
+    </js-module>
+
     <platform name="android">
-		<config-file target="res/xml/config.xml" parent="/*">
-            <feature name="NewActivity" >
-                <param name="android-package" value="com.manu.videoplayer.NewActivity"/>
+
+        <config-file target="res/xml/config.xml" parent="/*">
+            <feature name="VideoPlayer">
+                <param name="android-package" value="com.manu.videoplayer.VideoPlayer"/>
             </feature>
         </config-file>
-		
-		<config-file target="AndroidManifest.xml" parent="/*">
-            <uses-permission android:name="android.permission.INTERNET" />
-        </config-file>
-	   <!-- Below things may not be necessary -->
-	   <source-file src="src/activity_new.xml" target-dir="res/layout"/>
-		<source-file src="src/strings.xml" target-dir="res/values"/>
-	   <source-file src="src/NewActivity.java" target-dir="src/com/manu/videoplayer" />
-		<source-file src="src/VideoActivity.java" target-dir="src/com/manu/videoplayer" />
-		<source-file src="src/FakeR.java" target-dir="src/com/manu/videoplayer" />
-	</platform>   
+
+        <source-file src="src/android/VideoPlayer.java" target-dir="src/com/manu/videoplayer" />
+
+    </platform>
+
 </plugin>
