@@ -23,7 +23,7 @@
             </feature>
         </config-file>
 
-        <source-file src="src/android/VideoPlayer.java" target-dir="src/com/moust/cordova/videoplayer" />
+        <source-file src="src/VideoPlayer.java" target-dir="src/com/moust/cordova/videoplayer" />
 
     </platform>
 
