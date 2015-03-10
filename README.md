@@ -3,7 +3,7 @@ Video Player with button on top
 
 INSTALLATION
 ------------
-cordova plugin add https://github.com/manudravid/video.git
+'cordova plugin add https://github.com/manudravid/video.git'
 
 HOW TO USE
 ----------
